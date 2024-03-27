@@ -1,8 +1,12 @@
 #! /bin/bash
 
+# 检查neuware_home是否设置
 check_neuware_home_path=true
+# 检查lib64
 check_lib64=true
+# 检查include
 check_include=true
+# 检查环境变量NEUWARE_HOME是否存在  | -z: 判断字符串是否为空 | !: 取反 | -f: 文件是否存在
 if [ ! -z "${NEUWARE_HOME}" ]; then
     echo "-- using NEUWARE_HOME = ${NEUWARE_HOME}"
 
@@ -60,7 +64,7 @@ set -e
 BUILD_DIR="build"
 rm -rf "$BUILD_DIR"
 mkdir -p "$BUILD_DIR"
-
+# pushd popd 入栈出栈 like cd
 pushd ${BUILD_DIR}
     cmake ..
     make

@@ -1,4 +1,4 @@
-#!/bin/bash
+#! /bin/bash
 
 # check para
 if [ $# -ne 1 ]; then
