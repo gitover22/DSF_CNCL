@@ -25,7 +25,7 @@ CNCL样例
 samples文件夹
 
 - CMakeLists.txt：cmake描述文件，用于编译样例。
-- build.sh: 首先检查依赖库文件是否完整，然后使用cmake编译所有样例。
+- build.sh: 检查依赖库文件是否完整，并创建build，使用cmake编译所有样例。
 - broadcast_demo.cc：cnclBroadcast接口使用样例。
 - allgather_demo.cc : cnclAllGather接口使用样例。
 - allreduce_demo.cc : cnclAllReduce接口使用样例。

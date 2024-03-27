@@ -791,7 +791,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "samples"
+			"value" : "cncl_demo"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1056,6 +1056,30 @@
 			],
 			"type" : "BOOL",
 			"value" : "FALSE"
+		},
+		{
+			"name" : "cncl_demo_BINARY_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/zouguoqiang/cncl/build"
+		},
+		{
+			"name" : "cncl_demo_SOURCE_DIR",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Value Computed by CMake"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "/home/zouguoqiang/cncl"
 		},
 		{
 			"name" : "samples_BINARY_DIR",

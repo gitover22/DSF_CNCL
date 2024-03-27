@@ -34,7 +34,7 @@
 					[
 						0
 					],
-					"name" : "samples",
+					"name" : "cncl_demo",
 					"targetIndexes" : 
 					[
 						0,
@@ -54,63 +54,63 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "all2all_demo::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-all2all_demo-Debug-7a19cbb47fa51af7c707.json",
+					"jsonFile" : "target-all2all_demo-Debug-bf1e9acd71eb58904080.json",
 					"name" : "all2all_demo",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "all2one_demo::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-all2one_demo-Debug-996de2f2dd2838b8c1b9.json",
+					"jsonFile" : "target-all2one_demo-Debug-5cf010995757ee092b84.json",
 					"name" : "all2one_demo",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "allgather_demo::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-allgather_demo-Debug-446019333adca5ba504b.json",
+					"jsonFile" : "target-allgather_demo-Debug-f931350ac97138b3149c.json",
 					"name" : "allgather_demo",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "allreduce_demo::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-allreduce_demo-Debug-b875884a4495fcbdd4d4.json",
+					"jsonFile" : "target-allreduce_demo-Debug-f5cee1871f53a887a58a.json",
 					"name" : "allreduce_demo",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "broadcast_demo::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-broadcast_demo-Debug-a8ac6372f2626bd97fef.json",
+					"jsonFile" : "target-broadcast_demo-Debug-8dcb014ad89fa58d62ad.json",
 					"name" : "broadcast_demo",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "one2all_demo::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-one2all_demo-Debug-6365c89ad4e30b9f3522.json",
+					"jsonFile" : "target-one2all_demo-Debug-9888409a4fa8d7fcf641.json",
 					"name" : "one2all_demo",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "reduce_demo::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-reduce_demo-Debug-672443f9444dd67a0a77.json",
+					"jsonFile" : "target-reduce_demo-Debug-c37cf1183708cb1b716d.json",
 					"name" : "reduce_demo",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "reducescatter_demo::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-reducescatter_demo-Debug-60951a2222be5c82b049.json",
+					"jsonFile" : "target-reducescatter_demo-Debug-e690c8a4e1b2bf0863f1.json",
 					"name" : "reducescatter_demo",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "test::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-test-Debug-da766817fb1d9681bcbf.json",
+					"jsonFile" : "target-test-Debug-b0e009e9c7f93ab5385d.json",
 					"name" : "test",
 					"projectIndex" : 0
 				}

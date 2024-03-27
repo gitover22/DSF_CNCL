@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "allreduce_demo"
+			"path" : "reduce_demo"
 		}
 	],
 	"backtrace" : 1,
@@ -25,19 +25,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 16,
+				"line" : 15,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 3,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
 				"line" : 4,
-				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
-				"line" : 5,
 				"parent" : 0
 			}
 		]
@@ -69,7 +69,7 @@
 			]
 		}
 	],
-	"id" : "allreduce_demo::@6890427a1f51a3e7e1df",
+	"id" : "reduce_demo::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -93,8 +93,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "allreduce_demo",
-	"nameOnDisk" : "allreduce_demo",
+	"name" : "reduce_demo",
+	"nameOnDisk" : "reduce_demo",
 	"paths" : 
 	{
 		"build" : ".",
@@ -115,7 +115,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "allreduce_demo.cc",
+			"path" : "reduce_demo.cc",
 			"sourceGroupIndex" : 0
 		}
 	],
