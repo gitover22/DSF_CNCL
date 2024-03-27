@@ -1,0 +1,131 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "2.8"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "samples",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "all2all_demo::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all2all_demo-Debug-7a19cbb47fa51af7c707.json",
+					"name" : "all2all_demo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all2one_demo::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all2one_demo-Debug-996de2f2dd2838b8c1b9.json",
+					"name" : "all2one_demo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "allgather_demo::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-allgather_demo-Debug-446019333adca5ba504b.json",
+					"name" : "allgather_demo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "allreduce_demo::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-allreduce_demo-Debug-b875884a4495fcbdd4d4.json",
+					"name" : "allreduce_demo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "broadcast_demo::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-broadcast_demo-Debug-a8ac6372f2626bd97fef.json",
+					"name" : "broadcast_demo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "one2all_demo::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-one2all_demo-Debug-6365c89ad4e30b9f3522.json",
+					"name" : "one2all_demo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "reduce_demo::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-reduce_demo-Debug-672443f9444dd67a0a77.json",
+					"name" : "reduce_demo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "reducescatter_demo::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-reducescatter_demo-Debug-60951a2222be5c82b049.json",
+					"name" : "reducescatter_demo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-test-Debug-da766817fb1d9681bcbf.json",
+					"name" : "test",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/zouguoqiang/cncl/build",
+		"source" : "/home/zouguoqiang/cncl"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

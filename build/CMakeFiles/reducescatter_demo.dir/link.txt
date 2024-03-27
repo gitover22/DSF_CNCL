@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/reducescatter_demo.dir/reducescatter_demo.cc.o  -o reducescatter_demo  -L/usr/local/neuware/lib64 -Wl,-rpath,/usr/local/neuware/lib64 -lcncl -lcnrt -lcndrv -lcndev -lpthread -lrt 

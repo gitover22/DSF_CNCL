@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/reduce_demo.dir/reduce_demo.cc.o  -o reduce_demo  -L/usr/local/neuware/lib64 -Wl,-rpath,/usr/local/neuware/lib64 -lcncl -lcnrt -lcndrv -lcndev -lpthread -lrt 
