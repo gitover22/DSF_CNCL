@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/zouguoqiang/cncl/all2all_demo.cc
+cncl.h
+-
+cnrt.h
+-
+thread
+-
+vector
+-
+check.h
+/home/zouguoqiang/cncl/check.h
+
+/home/zouguoqiang/cncl/check.h
+cncl.h
+-
+
+/usr/local/neuware/include/cncl.h
+cnrt.h
+-
+
+/usr/local/neuware/include/cnrt.h
+stdbool.h
+-
+stdint.h
+-
+stddef.h
+-
+stdio.h
+-
+

@@ -1,0 +1,55 @@
+[
+{
+  "directory": "/home/zouguoqiang/cncl/build",
+  "command": "/usr/bin/clang++   -I/usr/local/neuware/include -I/..  -g   -g -Wall -std=c++11 -o CMakeFiles/test.dir/test.cc.o -c /home/zouguoqiang/cncl/test.cc",
+  "file": "/home/zouguoqiang/cncl/test.cc"
+},
+
+{
+  "directory": "/home/zouguoqiang/cncl/build",
+  "command": "/usr/bin/clang++   -I/usr/local/neuware/include -I/..  -g   -g -Wall -std=c++11 -o CMakeFiles/reducescatter_demo.dir/reducescatter_demo.cc.o -c /home/zouguoqiang/cncl/reducescatter_demo.cc",
+  "file": "/home/zouguoqiang/cncl/reducescatter_demo.cc"
+},
+
+{
+  "directory": "/home/zouguoqiang/cncl/build",
+  "command": "/usr/bin/clang++   -I/usr/local/neuware/include -I/..  -g   -g -Wall -std=c++11 -o CMakeFiles/reduce_demo.dir/reduce_demo.cc.o -c /home/zouguoqiang/cncl/reduce_demo.cc",
+  "file": "/home/zouguoqiang/cncl/reduce_demo.cc"
+},
+
+{
+  "directory": "/home/zouguoqiang/cncl/build",
+  "command": "/usr/bin/clang++   -I/usr/local/neuware/include -I/..  -g   -g -Wall -std=c++11 -o CMakeFiles/all2all_demo.dir/all2all_demo.cc.o -c /home/zouguoqiang/cncl/all2all_demo.cc",
+  "file": "/home/zouguoqiang/cncl/all2all_demo.cc"
+},
+
+{
+  "directory": "/home/zouguoqiang/cncl/build",
+  "command": "/usr/bin/clang++   -I/usr/local/neuware/include -I/..  -g   -g -Wall -std=c++11 -o CMakeFiles/one2all_demo.dir/one2all_demo.cc.o -c /home/zouguoqiang/cncl/one2all_demo.cc",
+  "file": "/home/zouguoqiang/cncl/one2all_demo.cc"
+},
+
+{
+  "directory": "/home/zouguoqiang/cncl/build",
+  "command": "/usr/bin/clang++   -I/usr/local/neuware/include -I/..  -g   -g -Wall -std=c++11 -o CMakeFiles/allgather_demo.dir/allgather_demo.cc.o -c /home/zouguoqiang/cncl/allgather_demo.cc",
+  "file": "/home/zouguoqiang/cncl/allgather_demo.cc"
+},
+
+{
+  "directory": "/home/zouguoqiang/cncl/build",
+  "command": "/usr/bin/clang++   -I/usr/local/neuware/include -I/..  -g   -g -Wall -std=c++11 -o CMakeFiles/all2one_demo.dir/all2one_demo.cc.o -c /home/zouguoqiang/cncl/all2one_demo.cc",
+  "file": "/home/zouguoqiang/cncl/all2one_demo.cc"
+},
+
+{
+  "directory": "/home/zouguoqiang/cncl/build",
+  "command": "/usr/bin/clang++   -I/usr/local/neuware/include -I/..  -g   -g -Wall -std=c++11 -o CMakeFiles/allreduce_demo.dir/allreduce_demo.cc.o -c /home/zouguoqiang/cncl/allreduce_demo.cc",
+  "file": "/home/zouguoqiang/cncl/allreduce_demo.cc"
+},
+
+{
+  "directory": "/home/zouguoqiang/cncl/build",
+  "command": "/usr/bin/clang++   -I/usr/local/neuware/include -I/..  -g   -g -Wall -std=c++11 -o CMakeFiles/broadcast_demo.dir/broadcast_demo.cc.o -c /home/zouguoqiang/cncl/broadcast_demo.cc",
+  "file": "/home/zouguoqiang/cncl/broadcast_demo.cc"
+}
+]
