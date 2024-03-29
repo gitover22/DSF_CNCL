@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/zouguoqiang/cncl/src/mlu_comm.cc
+cncl.h
+-
+tool.h
+/home/zouguoqiang/cncl/src/tool.h
+memory
+-
+iostream
+-
+
+/home/zouguoqiang/cncl/src/tool.cc
+tool.h
+/home/zouguoqiang/cncl/src/tool.h
+
+/home/zouguoqiang/cncl/src/tool.h
+string
+-
+iostream
+-
+vector
+-
+
+/usr/local/neuware/include/cncl.h
+cnrt.h
+-
+
+/usr/local/neuware/include/cnrt.h
+stdbool.h
+-
+stdint.h
+-
+stddef.h
+-
+stdio.h
+-
+

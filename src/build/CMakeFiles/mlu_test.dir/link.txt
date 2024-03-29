@@ -1,0 +1,1 @@
+clang++   -Wall  -rdynamic CMakeFiles/mlu_test.dir/mlu_comm.cc.o CMakeFiles/mlu_test.dir/tool.cc.o  -o mlu_test -lstdc++ 

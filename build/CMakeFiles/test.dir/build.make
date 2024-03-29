@@ -60,15 +60,15 @@ include CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/test.cc.o: CMakeFiles/test.dir/flags.make
 CMakeFiles/test.dir/test.cc.o: ../test.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zouguoqiang/cncl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test.dir/test.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test.dir/test.cc.o -c /home/zouguoqiang/cncl/test.cc
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/test.dir/test.cc.o -c /home/zouguoqiang/cncl/test.cc
 
 CMakeFiles/test.dir/test.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/test.dir/test.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zouguoqiang/cncl/test.cc > CMakeFiles/test.dir/test.cc.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zouguoqiang/cncl/test.cc > CMakeFiles/test.dir/test.cc.i
 
 CMakeFiles/test.dir/test.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/test.dir/test.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zouguoqiang/cncl/test.cc -o CMakeFiles/test.dir/test.cc.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zouguoqiang/cncl/test.cc -o CMakeFiles/test.dir/test.cc.s
 
 # Object files for target test
 test_OBJECTS = \

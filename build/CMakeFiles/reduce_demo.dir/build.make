@@ -60,15 +60,15 @@ include CMakeFiles/reduce_demo.dir/flags.make
 CMakeFiles/reduce_demo.dir/reduce_demo.cc.o: CMakeFiles/reduce_demo.dir/flags.make
 CMakeFiles/reduce_demo.dir/reduce_demo.cc.o: ../reduce_demo.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zouguoqiang/cncl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/reduce_demo.dir/reduce_demo.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reduce_demo.dir/reduce_demo.cc.o -c /home/zouguoqiang/cncl/reduce_demo.cc
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/reduce_demo.dir/reduce_demo.cc.o -c /home/zouguoqiang/cncl/reduce_demo.cc
 
 CMakeFiles/reduce_demo.dir/reduce_demo.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/reduce_demo.dir/reduce_demo.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zouguoqiang/cncl/reduce_demo.cc > CMakeFiles/reduce_demo.dir/reduce_demo.cc.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zouguoqiang/cncl/reduce_demo.cc > CMakeFiles/reduce_demo.dir/reduce_demo.cc.i
 
 CMakeFiles/reduce_demo.dir/reduce_demo.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/reduce_demo.dir/reduce_demo.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zouguoqiang/cncl/reduce_demo.cc -o CMakeFiles/reduce_demo.dir/reduce_demo.cc.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zouguoqiang/cncl/reduce_demo.cc -o CMakeFiles/reduce_demo.dir/reduce_demo.cc.s
 
 # Object files for target reduce_demo
 reduce_demo_OBJECTS = \

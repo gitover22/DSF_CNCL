@@ -1,1 +1,1 @@
-/usr/bin/c++    -rdynamic CMakeFiles/one2all_demo.dir/one2all_demo.cc.o  -o one2all_demo  -L/usr/local/neuware/lib64 -Wl,-rpath,/usr/local/neuware/lib64 -lcncl -lcnrt -lcndrv -lcndev -lpthread -lrt 
+/usr/bin/clang++    -rdynamic CMakeFiles/one2all_demo.dir/one2all_demo.cc.o  -o one2all_demo  -L/usr/local/neuware/lib64 -Wl,-rpath,/usr/local/neuware/lib64 -lcncl -lcnrt -lcndrv -lcndev -lpthread -lrt 

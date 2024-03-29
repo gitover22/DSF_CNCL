@@ -60,15 +60,15 @@ include CMakeFiles/allgather_demo.dir/flags.make
 CMakeFiles/allgather_demo.dir/allgather_demo.cc.o: CMakeFiles/allgather_demo.dir/flags.make
 CMakeFiles/allgather_demo.dir/allgather_demo.cc.o: ../allgather_demo.cc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zouguoqiang/cncl/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/allgather_demo.dir/allgather_demo.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/allgather_demo.dir/allgather_demo.cc.o -c /home/zouguoqiang/cncl/allgather_demo.cc
+	/usr/bin/clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/allgather_demo.dir/allgather_demo.cc.o -c /home/zouguoqiang/cncl/allgather_demo.cc
 
 CMakeFiles/allgather_demo.dir/allgather_demo.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/allgather_demo.dir/allgather_demo.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zouguoqiang/cncl/allgather_demo.cc > CMakeFiles/allgather_demo.dir/allgather_demo.cc.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zouguoqiang/cncl/allgather_demo.cc > CMakeFiles/allgather_demo.dir/allgather_demo.cc.i
 
 CMakeFiles/allgather_demo.dir/allgather_demo.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/allgather_demo.dir/allgather_demo.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zouguoqiang/cncl/allgather_demo.cc -o CMakeFiles/allgather_demo.dir/allgather_demo.cc.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zouguoqiang/cncl/allgather_demo.cc -o CMakeFiles/allgather_demo.dir/allgather_demo.cc.s
 
 # Object files for target allgather_demo
 allgather_demo_OBJECTS = \
