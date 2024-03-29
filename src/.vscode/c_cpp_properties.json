@@ -4,7 +4,7 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                // "/usr/local/neuware/include/"  // 头文件搜索路径
+                "/usr/local/neuware/include/"  // 头文件搜索路径
             ],
             "defines": [],
             "cStandard": "c17",

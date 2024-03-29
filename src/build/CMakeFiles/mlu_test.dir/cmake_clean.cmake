@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/mlu_test.dir/mluTool.cc.o"
   "CMakeFiles/mlu_test.dir/mlu_comm.cc.o"
-  "CMakeFiles/mlu_test.dir/tool.cc.o"
   "mlu_test"
   "mlu_test.pdb"
 )

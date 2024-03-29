@@ -1,5 +1,5 @@
 /home/zouguoqiang/cncl/build/CMakeFiles/rebuild_cache.dir
-/home/zouguoqiang/cncl/build/CMakeFiles/test.dir
+/home/zouguoqiang/cncl/build/CMakeFiles/test_demo.dir
 /home/zouguoqiang/cncl/build/CMakeFiles/reducescatter_demo.dir
 /home/zouguoqiang/cncl/build/CMakeFiles/reduce_demo.dir
 /home/zouguoqiang/cncl/build/CMakeFiles/all2all_demo.dir

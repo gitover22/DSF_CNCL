@@ -70,29 +70,29 @@ CMakeFiles/mlu_test.dir/mlu_comm.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mlu_test.dir/mlu_comm.cc.s"
 	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zouguoqiang/cncl/src/mlu_comm.cc -o CMakeFiles/mlu_test.dir/mlu_comm.cc.s
 
-CMakeFiles/mlu_test.dir/tool.cc.o: CMakeFiles/mlu_test.dir/flags.make
-CMakeFiles/mlu_test.dir/tool.cc.o: ../tool.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zouguoqiang/cncl/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/mlu_test.dir/tool.cc.o"
-	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mlu_test.dir/tool.cc.o -c /home/zouguoqiang/cncl/src/tool.cc
+CMakeFiles/mlu_test.dir/mluTool.cc.o: CMakeFiles/mlu_test.dir/flags.make
+CMakeFiles/mlu_test.dir/mluTool.cc.o: ../mluTool.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/zouguoqiang/cncl/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/mlu_test.dir/mluTool.cc.o"
+	clang++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/mlu_test.dir/mluTool.cc.o -c /home/zouguoqiang/cncl/src/mluTool.cc
 
-CMakeFiles/mlu_test.dir/tool.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mlu_test.dir/tool.cc.i"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zouguoqiang/cncl/src/tool.cc > CMakeFiles/mlu_test.dir/tool.cc.i
+CMakeFiles/mlu_test.dir/mluTool.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/mlu_test.dir/mluTool.cc.i"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/zouguoqiang/cncl/src/mluTool.cc > CMakeFiles/mlu_test.dir/mluTool.cc.i
 
-CMakeFiles/mlu_test.dir/tool.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mlu_test.dir/tool.cc.s"
-	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zouguoqiang/cncl/src/tool.cc -o CMakeFiles/mlu_test.dir/tool.cc.s
+CMakeFiles/mlu_test.dir/mluTool.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/mlu_test.dir/mluTool.cc.s"
+	clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/zouguoqiang/cncl/src/mluTool.cc -o CMakeFiles/mlu_test.dir/mluTool.cc.s
 
 # Object files for target mlu_test
 mlu_test_OBJECTS = \
 "CMakeFiles/mlu_test.dir/mlu_comm.cc.o" \
-"CMakeFiles/mlu_test.dir/tool.cc.o"
+"CMakeFiles/mlu_test.dir/mluTool.cc.o"
 
 # External object files for target mlu_test
 mlu_test_EXTERNAL_OBJECTS =
 
 mlu_test: CMakeFiles/mlu_test.dir/mlu_comm.cc.o
-mlu_test: CMakeFiles/mlu_test.dir/tool.cc.o
+mlu_test: CMakeFiles/mlu_test.dir/mluTool.cc.o
 mlu_test: CMakeFiles/mlu_test.dir/build.make
 mlu_test: CMakeFiles/mlu_test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/zouguoqiang/cncl/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable mlu_test"

@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/zouguoqiang/cncl/src/mluTool.cc" "/home/zouguoqiang/cncl/src/build/CMakeFiles/mlu_test.dir/mluTool.cc.o"
   "/home/zouguoqiang/cncl/src/mlu_comm.cc" "/home/zouguoqiang/cncl/src/build/CMakeFiles/mlu_test.dir/mlu_comm.cc.o"
-  "/home/zouguoqiang/cncl/src/tool.cc" "/home/zouguoqiang/cncl/src/build/CMakeFiles/mlu_test.dir/tool.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

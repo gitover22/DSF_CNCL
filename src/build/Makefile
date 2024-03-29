@@ -123,6 +123,33 @@ mlu_test/fast:
 	$(MAKE) -f CMakeFiles/mlu_test.dir/build.make CMakeFiles/mlu_test.dir/build
 .PHONY : mlu_test/fast
 
+mluTool.o: mluTool.cc.o
+
+.PHONY : mluTool.o
+
+# target to build an object file
+mluTool.cc.o:
+	$(MAKE) -f CMakeFiles/mlu_test.dir/build.make CMakeFiles/mlu_test.dir/mluTool.cc.o
+.PHONY : mluTool.cc.o
+
+mluTool.i: mluTool.cc.i
+
+.PHONY : mluTool.i
+
+# target to preprocess a source file
+mluTool.cc.i:
+	$(MAKE) -f CMakeFiles/mlu_test.dir/build.make CMakeFiles/mlu_test.dir/mluTool.cc.i
+.PHONY : mluTool.cc.i
+
+mluTool.s: mluTool.cc.s
+
+.PHONY : mluTool.s
+
+# target to generate assembly for a file
+mluTool.cc.s:
+	$(MAKE) -f CMakeFiles/mlu_test.dir/build.make CMakeFiles/mlu_test.dir/mluTool.cc.s
+.PHONY : mluTool.cc.s
+
 mlu_comm.o: mlu_comm.cc.o
 
 .PHONY : mlu_comm.o
@@ -150,33 +177,6 @@ mlu_comm.cc.s:
 	$(MAKE) -f CMakeFiles/mlu_test.dir/build.make CMakeFiles/mlu_test.dir/mlu_comm.cc.s
 .PHONY : mlu_comm.cc.s
 
-tool.o: tool.cc.o
-
-.PHONY : tool.o
-
-# target to build an object file
-tool.cc.o:
-	$(MAKE) -f CMakeFiles/mlu_test.dir/build.make CMakeFiles/mlu_test.dir/tool.cc.o
-.PHONY : tool.cc.o
-
-tool.i: tool.cc.i
-
-.PHONY : tool.i
-
-# target to preprocess a source file
-tool.cc.i:
-	$(MAKE) -f CMakeFiles/mlu_test.dir/build.make CMakeFiles/mlu_test.dir/tool.cc.i
-.PHONY : tool.cc.i
-
-tool.s: tool.cc.s
-
-.PHONY : tool.s
-
-# target to generate assembly for a file
-tool.cc.s:
-	$(MAKE) -f CMakeFiles/mlu_test.dir/build.make CMakeFiles/mlu_test.dir/tool.cc.s
-.PHONY : tool.cc.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +186,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... mlu_test"
 	@echo "... edit_cache"
+	@echo "... mluTool.o"
+	@echo "... mluTool.i"
+	@echo "... mluTool.s"
 	@echo "... mlu_comm.o"
 	@echo "... mlu_comm.i"
 	@echo "... mlu_comm.s"
-	@echo "... tool.o"
-	@echo "... tool.i"
-	@echo "... tool.s"
 .PHONY : help
 
 
