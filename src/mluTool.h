@@ -8,12 +8,13 @@
 #include<cncl.h>
 #include<memory>
 
-
+// pointers
 using intPtr =std::unique_ptr<int[]>;
 using cnclCommPtr = std::unique_ptr<cnclComm_t[]>;
 using cnrtQueuePtr = std::unique_ptr<cnrtQueue_t[]>;
+
 /**
- * @brief check CNRT result
+ * @brief 检查CNRT系列函数执行结果
 */
 #define CNRT_CHECK_TMP(call)                                       \
   do {                                                             \
@@ -25,26 +26,25 @@ using cnrtQueuePtr = std::unique_ptr<cnrtQueue_t[]>;
   } while (0)
 
 /**
- * @brief get device nums
- * @param [out] nums pointer to the number of devices
+ * @brief 获取设备数量
+ * @param nums [out] 接受指向设备数量的地址
 */
 void GetMluNums(uint32_t *nums);
 
 /**
- * @brief eazy map for dev and rank number
- * @param [in] num_comms number of comms
- * @param [in] num_dev number of mlu devices
- * @param [out] dev_list 设备队列的数组 
- * @param [out] rank_list 通信子对应的rank号数组
+ * @brief 映射rank号数组和设备数组
+ * @param num_comms [in] 通信子数量
+ * @param num_dev [in] 设备数量
+ * @param dev_list [out] 设备队列的数组 
+ * @param rank_list [out] 通信子对应的rank号数组
 */
 void MapRankandDev(int num_comms,uint32_t num_dev,int *dev_list,int *rank_list);
 
-
-
-
-
-
-
+/**
+ * @brief 打印int型数组
+ * @param list [in] 待打印数组的地址
+ * @param num [in] 数组长度
+*/
 void PrintList(int * list,int num);
 
 

@@ -14,7 +14,6 @@ void MapRankandDev(int num_comms,uint32_t num_dev,int *dev_list,int *rank_list){
 }
 
 void PrintList(int *list,int num){
-// 打印dev_list，rank_list
     for(int i=0;i<num;i++){
         printf("list[%d]: %d\n",i,list[i]);  
     }

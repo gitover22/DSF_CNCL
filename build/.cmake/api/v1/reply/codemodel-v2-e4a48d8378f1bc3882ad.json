@@ -1,0 +1,59 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "mlu_test",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "mlu_test::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-mlu_test-Debug-5db8643b3845d2f48115.json",
+					"name" : "mlu_test",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/zouguoqiang/cncl/build",
+		"source" : "/home/zouguoqiang/cncl/src"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}

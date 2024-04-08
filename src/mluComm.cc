@@ -1,11 +1,12 @@
-#include "mluTool.h"
-#include <memory>
-#include <thread>
-#include <iostream>
 /**
  @brife test for mlu comm
  @author huafeng
 */
+#include "mluTool.h"
+#include <memory>
+#include <thread>
+#include <iostream>
+
 int main(int argc , char *argv[])
 {   
     if(argc != 2){

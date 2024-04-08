@@ -7,8 +7,13 @@
 #include <cnrt.h>
 #include <thread> 
 #include <vector>
-
+#include <iostream>
 
 int main(int argc, char* argv[]) {
-  
+    std::cout<<"-------------------------------begin test-------------------------------"<<std::endl;
+
+	
+
+    
+    std::cout<<"-------------------------------end test-------------------------------"<<std::endl;
 }

@@ -1,0 +1,13 @@
+[
+{
+  "directory": "/home/zouguoqiang/cncl/build",
+  "command": "clang++   -I/usr/local/neuware/include   -Wall -g   -g -Wall -std=c++11 -std=gnu++17 -o CMakeFiles/mlu_test.dir/mlu_comm.cc.o -c /home/zouguoqiang/cncl/src/mlu_comm.cc",
+  "file": "/home/zouguoqiang/cncl/src/mlu_comm.cc"
+},
+
+{
+  "directory": "/home/zouguoqiang/cncl/build",
+  "command": "clang++   -I/usr/local/neuware/include   -Wall -g   -g -Wall -std=c++11 -std=gnu++17 -o CMakeFiles/mlu_test.dir/mluTool.cc.o -c /home/zouguoqiang/cncl/src/mluTool.cc",
+  "file": "/home/zouguoqiang/cncl/src/mluTool.cc"
+}
+]

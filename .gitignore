@@ -1,3 +1,4 @@
 push.sh
 src/build/
 src/.vscode/
+test/build/
