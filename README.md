@@ -2,7 +2,7 @@ DSF_CNCL
 =================
 
 项目简介
-- DSF_CNCL：DSM system framework based on CNCL
+- DSF_CNCL：DSM System Framework based on CNCL
 - 基于mlu370集群，CNCL搭建DSM框架
 - 项目未完成，待做！！
 
