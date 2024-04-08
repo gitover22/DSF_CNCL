@@ -24,7 +24,7 @@ DSF_CNCL
 
 文件介绍
 
-src文件夹
+src
 
 - CMakeLists.txt：cmake描述文件，用于编译样例。
 - build.sh: 检查依赖库文件是否完整，并创建build，使用cmake编译所有样例。
@@ -50,11 +50,9 @@ src文件夹
 ```
 
 RUN：
+需要有mlu370的集群环境，具体配置可参考[官方手册](https://www.cambricon.com/docs/sdk_1.15.0/cncl_1.13.0/user_guide/4_quickstart/installation/index.html)
 
 ```
-需要有mlu370的集群环境，然后配置，可参考[官方手册](https://www.cambricon.com/docs/sdk_1.15.0/cncl_1.13.0/user_guide/4_quickstart/installation/index.html)
-export NEUWARE_HOME=/path/to/your/neuware_home
-export LD_LIBRARY_PATH=${NEUWARE_HOME}/lib64:${LD_LIBRARY_PATH}
 cd src
 ./build.sh
 cd build
