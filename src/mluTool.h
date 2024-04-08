@@ -6,7 +6,12 @@
 #include<vector>
 #include<cnrt.h>
 #include<cncl.h>
+#include<memory>
 
+
+using intPtr =std::unique_ptr<int[]>;
+using cnclCommPtr = std::unique_ptr<cnclComm_t[]>;
+using cnrtQueuePtr = std::unique_ptr<cnrtQueue_t[]>;
 /**
  * @brief check CNRT result
 */
@@ -40,7 +45,7 @@ void MapRankandDev(int num_comms,uint32_t num_dev,int *dev_list,int *rank_list);
 
 
 
-
+void PrintList(int * list,int num);
 
 
 

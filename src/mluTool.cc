@@ -12,3 +12,10 @@ void MapRankandDev(int num_comms,uint32_t num_dev,int *dev_list,int *rank_list){
         dev_list[i] = rank_list[i] % num_dev;  // dev_list[i] = [0,1,2,3] % 8     dev_list = [0,1,2,3]
     }
 }
+
+void PrintList(int *list,int num){
+// 打印dev_list，rank_list
+    for(int i=0;i<num;i++){
+        printf("list[%d]: %d\n",i,list[i]);  
+    }
+}

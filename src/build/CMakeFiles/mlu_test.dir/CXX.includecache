@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/zouguoqiang/cncl/src/mluTool.cc
-mluTool.h
-/home/zouguoqiang/cncl/src/mluTool.h
-sys/types.h
--
-
 /home/zouguoqiang/cncl/src/mluTool.h
 string
 -
@@ -22,6 +16,8 @@ vector
 cnrt.h
 -
 cncl.h
+-
+memory
 -
 
 /home/zouguoqiang/cncl/src/mlu_comm.cc

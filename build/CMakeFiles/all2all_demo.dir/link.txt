@@ -1,1 +1,0 @@
-/usr/bin/clang++    -rdynamic CMakeFiles/all2all_demo.dir/all2all_demo.cc.o  -o all2all_demo  -L/usr/local/neuware/lib64 -Wl,-rpath,/usr/local/neuware/lib64 -lcncl -lcnrt -lcndrv -lcndev -lpthread -lrt 
