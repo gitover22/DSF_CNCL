@@ -1,42 +1,39 @@
-快速入门
+DSF_CNCL
 =================
 
-CNCL样例
--------------
+项目简介
+- DSF_CNCL：DSM system framework based on CNCL
+- 基于mlu370集群，CNCL搭建DSM框架
+- 项目未完成，待做！！
 
-开发样例目录结构
+
+
+目录结构
 
 ```
-|-- samples
+|-- src
     |-- build.sh
     |-- CMakeLists.txt
-    |-- broadcast_demo.cc
-    |-- allgather_demo.cc
-    |-- allreduce_demo.cc
-    |-- reduce_demo.cc
-    |-- reducescatter_demo.cc
-    |-- one2all_demo.cc
-    |-- all2one_demo.cc
-    |-- all2all_demo.cc
+    |-- Makefile
+    |-- mluComm.cc
+    |-- mluTool.cc
+    |-- mluTool.h
+|-- README.md
+|-- testDemo.cc
 ```
 
-样例所有文件介绍
+文件介绍
 
-samples文件夹
+src文件夹
 
 - CMakeLists.txt：cmake描述文件，用于编译样例。
 - build.sh: 检查依赖库文件是否完整，并创建build，使用cmake编译所有样例。
-- broadcast_demo.cc：cnclBroadcast接口使用样例。
-- allgather_demo.cc : cnclAllGather接口使用样例。
-- allreduce_demo.cc : cnclAllReduce接口使用样例。
-- reduce_demo.cc : cnclReduce接口使用样例。
-- reducescatter_demo.cc : cnclReduceScatter接口使用样例。
-- one2all_demo.cc : cnclSend、cnclRecv接口使用样例。
-- all2one_demo.cc : cnclSend、cnclRecv接口使用样例。
-- all2all_demo.cc : cnclAlltoAllv接口使用样例。
+- Makefile: 简易构建项目，用于简单自测
+- mluComm.cc: 主函数，待做
+- mluTool.cc: 工具实现
+- mluTool.h: 工具定义
 
-
-依赖库目录结构
+依赖库目录结构(cambricon官网可下载)
 
 ```
 |-- neuware_home
@@ -52,14 +49,14 @@ samples文件夹
 |     
 ```
 
-运行样例：
+RUN：
 
 ```
-#按照上述依赖库目录结构，创建文件夹存放编译样例所需依赖的头文件和动态库
+需要有mlu370的集群环境，然后配置，可参考[官方手册](https://www.cambricon.com/docs/sdk_1.15.0/cncl_1.13.0/user_guide/4_quickstart/installation/index.html)
 export NEUWARE_HOME=/path/to/your/neuware_home
 export LD_LIBRARY_PATH=${NEUWARE_HOME}/lib64:${LD_LIBRARY_PATH}
+cd src
 ./build.sh
 cd build
-./broadcast_demo
-./allreduce_demo
+./mluComm param
 ```
