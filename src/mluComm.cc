@@ -43,7 +43,7 @@ int main(int argc , char *argv[])
     std::vector<std::thread> threads;
     for(int i=0;i<num_comms;i++){
         // lamda表达式 [=]会导致拷贝所有外部作用域中的变量，包括std::unique_ptr。由于std::unique_ptr禁止拷贝（只能移动）\
-        所以这里在[]中声明所需引用的变量和需要拷贝的变量
+        所以这里在[]中声明所需引用的变量和需要拷贝的变量 
         std::thread t([&send_buffer, &recv_buffer, buf_count, i, &comms, &queues](){
             CNCL_CHECK(cnclAllReduce(send_buffer[i],recv_buffer[i],buf_count,cnclFloat32,cnclSum,comms[i],queues[i]));
         });
