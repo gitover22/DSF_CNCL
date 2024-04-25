@@ -3,6 +3,7 @@
  @author huafeng
 */
 #include "mluTool.h"
+#include <dev_MLU.h>
 #include <memory>
 #include <thread>
 #include <iostream>
@@ -16,8 +17,8 @@ int main(int argc , char *argv[])
         <<"Usage: ./runner num_comms"<<std::endl;
         return 0;
     }
-    int test_mlu(int);
-    test_mlu(atoi(argv[1]));
+    int comms = atoi(argv[1]);
+    
     return 0;
 }
 

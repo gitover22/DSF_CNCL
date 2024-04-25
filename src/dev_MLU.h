@@ -4,16 +4,28 @@
 #include "mluTool.h"
 class Dev_MLU {
 public:
-    // 初始化设备、队列、缓冲区
-    Dev_MLU(int id, size_t send_buffer_size,size_t recv_bufffer_size);
+    /**
+     * @brief 初试化当前设备为id上的资源
+     * @param id [in] 设备id号
+     * @param send_buffer_size [in] 发送缓冲区的大小
+     * @param recv_buffer_size [in] 接受缓冲区的大小
+     * @param need_queue [in] 是否需要申请队列
+    */
+    Dev_MLU(int id, size_t send_buffer_size,size_t recv_bufffer_size,bool open_queue);
 
-    // 对外接口：进行通信操作
-    void performCommunication(cnclComm_t comm);
+    /**
+     * @brief 初试化发送缓冲区
+    */
+    int init_sendBuffer();
 
-    // 同步队列
-    void syncQueue();
+    /**
+     * @brief 初试化接受缓冲区
+    */
+    int init_recvBuffer();
 
-    // 释放资源
+    /**
+     * @brief 释放缓冲区和队列
+    */
     ~Dev_MLU();
     
 

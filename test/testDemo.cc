@@ -17,7 +17,26 @@ int main(int argc, char* argv[]) {
     }
     int test_mlu(int);
     test_mlu(atoi(argv[1]));
+    return 0;
+    // void testcpp();
+    // testcpp();
 }
+
+void testcpp(){
+    // Create a unique_ptr managing an array of 10 integers
+    std::unique_ptr<int[]> myArray(new int[10]);
+    // Initialize the array with values
+    for (int i = 0; i < 10; ++i) {
+        myArray[i] = i * i;  // Set each element to its index squared
+    }
+    std::cout<<myArray[0]<<std::endl;
+
+    // Access and print the array elements
+    for (int i = 0; i < 10; ++i) {
+        std::cout << "myArray[" << i << "] = " << myArray[i] << std::endl;
+    }
+}
+
 
 
 
@@ -62,7 +81,7 @@ int test_mlu(int comm_num){
         });
         threads.push_back(std::move(t)); // 因为tread资源不允许拷贝构造，所以只能转化为右值，利用右值引用的移动构造来转移资源所有权
     }
-    for(auto& t:threads) t.join();
+    for(auto& t:threads) t.join(); 
     for (int i = 0; i < num_comms; i++)
     {
         CNRT_CHECK_TMP(cnrtQueueSync(queues[i]));
