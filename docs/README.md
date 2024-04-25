@@ -15,11 +15,16 @@ DSF_CNCL
     |-- build.sh
     |-- CMakeLists.txt
     |-- Makefile
+    |-- dev_MLU.cc
+    |-- dev_MLU.h
     |-- mluComm.cc
     |-- mluTool.cc
     |-- mluTool.h
+|-- test
+    |-- CMakeLists.txt
+    |-- build.sh
+    |-- testDemo.cc
 |-- README.md
-|-- testDemo.cc
 ```
 
 文件介绍
@@ -56,5 +61,5 @@ RUN：
 cd src
 ./build.sh
 cd build
-./mluComm param
+./mluComm
 ```
