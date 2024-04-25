@@ -47,10 +47,4 @@ void MapRankandDev(int num_comms,uint32_t num_dev,int *dev_list,int *rank_list);
 */
 void PrintList(int * list,int num);
 
-
-
-
-
-
-
 #endif
