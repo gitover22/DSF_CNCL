@@ -14,12 +14,13 @@ add_definitions("-g -Wall -std=c++11")
 
 # 设置头文件搜索路径 cncl.h等
 include_directories("/usr/local/neuware/include")
+include_directories("/home/zouguoqiang/DSF_CNCL/src")
 
 # 添加链接库的搜索路径  libcncl.so等搜索路径
 link_directories("$ENV{NEUWARE_HOME}/lib64") 
 
 # 添加可执行文件生成规则
-add_executable(testDemo testDemo.cc)
+add_executable(testDemo testDemo.cc ../src/mluTool.cc)
 
 # 链接所需的库
 target_link_libraries(testDemo stdc++ cncl cnrt cndrv cndev pthread rt)

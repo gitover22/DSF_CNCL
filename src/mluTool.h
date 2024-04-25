@@ -8,7 +8,7 @@
 #include<cncl.h>
 #include<memory>
 
-// pointers
+// 智能指针
 using intPtr =std::unique_ptr<int[]>;
 using cnclCommPtr = std::unique_ptr<cnclComm_t[]>;
 using cnrtQueuePtr = std::unique_ptr<cnrtQueue_t[]>;

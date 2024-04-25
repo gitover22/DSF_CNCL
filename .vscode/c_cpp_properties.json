@@ -4,7 +4,8 @@
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/usr/local/neuware/include/"  // 头文件搜索路径
+                "/usr/local/neuware/include/",  // 头文件搜索路径
+                "/home/zouguoqiang/DSF_CNCL/src" // 自己的头文件
             ],
             "defines": [],
             "compilerPath": "/usr/bin/clang",
