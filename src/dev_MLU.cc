@@ -1,10 +1,10 @@
 #include "dev_MLU.h"
 #include "mluTool.h"
 // 构造函数：初始化设备、队列、缓冲区
-Dev_MLU::Dev_MLU(int id, size_t send_buffer_size,size_t recv_bufffer_size, bool open_queue):device_id(id), \
+Dev_MLU::Dev_MLU(int id, size_t send_buffer_size,size_t recv_bufffer_size, bool need_queue):device_id(id), \
                     send_buffer_size(send_buffer_size),recv_buffer_size(recv_buffer_size) {
         // 初始化设备上的队列
-        if (open_queue)
+        if (need_queue)
             CNRT_CHECK_TMP(cnrtQueueCreate(&queue));
         CNRT_CHECK_TMP(cnrtSetDevice(device_id));
         init_sendBuffer();
@@ -24,7 +24,6 @@ int Dev_MLU::init_recvBuffer(){
 
 }
 
-// 析构函数：清理资源
 Dev_MLU::~Dev_MLU() {
     CNRT_CHECK_TMP(cnrtQueueDestroy(queue));
     CNRT_CHECK_TMP(cnrtFree(send_buffer));

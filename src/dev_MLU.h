@@ -11,7 +11,7 @@ public:
      * @param recv_buffer_size [in] 接受缓冲区的大小
      * @param need_queue [in] 是否需要申请队列
     */
-    Dev_MLU(int id, size_t send_buffer_size,size_t recv_bufffer_size,bool open_queue);
+    Dev_MLU(int id, size_t send_buffer_size,size_t recv_bufffer_size,bool need_queue);
 
     /**
      * @brief 初试化发送缓冲区

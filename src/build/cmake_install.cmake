@@ -1,4 +1,4 @@
-# Install script for directory: /home/zouguoqiang/cncl/src
+# Install script for directory: /home/zouguoqiang/DSF_CNCL/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/zouguoqiang/cncl/src/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/zouguoqiang/DSF_CNCL/src/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

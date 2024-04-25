@@ -54,50 +54,50 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zouguoqiang/cncl/src
+CMAKE_SOURCE_DIR = /home/zouguoqiang/DSF_CNCL/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zouguoqiang/cncl/src/build
+CMAKE_BINARY_DIR = /home/zouguoqiang/DSF_CNCL/src/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "clean" target.
-clean: CMakeFiles/mlu_test.dir/clean
+clean: CMakeFiles/mluComm.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/mlu_test.dir
+# Target rules for target CMakeFiles/mluComm.dir
 
 # All Build rule for target.
-CMakeFiles/mlu_test.dir/all:
-	$(MAKE) -f CMakeFiles/mlu_test.dir/build.make CMakeFiles/mlu_test.dir/depend
-	$(MAKE) -f CMakeFiles/mlu_test.dir/build.make CMakeFiles/mlu_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zouguoqiang/cncl/src/build/CMakeFiles --progress-num=1,2,3 "Built target mlu_test"
-.PHONY : CMakeFiles/mlu_test.dir/all
+CMakeFiles/mluComm.dir/all:
+	$(MAKE) -f CMakeFiles/mluComm.dir/build.make CMakeFiles/mluComm.dir/depend
+	$(MAKE) -f CMakeFiles/mluComm.dir/build.make CMakeFiles/mluComm.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zouguoqiang/DSF_CNCL/src/build/CMakeFiles --progress-num=1,2,3,4 "Built target mluComm"
+.PHONY : CMakeFiles/mluComm.dir/all
 
 # Include target in all.
-all: CMakeFiles/mlu_test.dir/all
+all: CMakeFiles/mluComm.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/mlu_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zouguoqiang/cncl/src/build/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/mlu_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zouguoqiang/cncl/src/build/CMakeFiles 0
-.PHONY : CMakeFiles/mlu_test.dir/rule
+CMakeFiles/mluComm.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zouguoqiang/DSF_CNCL/src/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/mluComm.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zouguoqiang/DSF_CNCL/src/build/CMakeFiles 0
+.PHONY : CMakeFiles/mluComm.dir/rule
 
 # Convenience name for target.
-mlu_test: CMakeFiles/mlu_test.dir/rule
+mluComm: CMakeFiles/mluComm.dir/rule
 
-.PHONY : mlu_test
+.PHONY : mluComm
 
 # clean rule for target.
-CMakeFiles/mlu_test.dir/clean:
-	$(MAKE) -f CMakeFiles/mlu_test.dir/build.make CMakeFiles/mlu_test.dir/clean
-.PHONY : CMakeFiles/mlu_test.dir/clean
+CMakeFiles/mluComm.dir/clean:
+	$(MAKE) -f CMakeFiles/mluComm.dir/build.make CMakeFiles/mluComm.dir/clean
+.PHONY : CMakeFiles/mluComm.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

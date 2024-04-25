@@ -48,10 +48,10 @@ RM = /usr/local/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/zouguoqiang/cncl/src
+CMAKE_SOURCE_DIR = /home/zouguoqiang/DSF_CNCL/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/zouguoqiang/cncl/src/build
+CMAKE_BINARY_DIR = /home/zouguoqiang/DSF_CNCL/src/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zouguoqiang/cncl/src/build/CMakeFiles /home/zouguoqiang/cncl/src/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zouguoqiang/DSF_CNCL/src/build/CMakeFiles /home/zouguoqiang/DSF_CNCL/src/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zouguoqiang/cncl/src/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zouguoqiang/DSF_CNCL/src/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,71 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named mlu_test
+# Target rules for targets named mluComm
 
 # Build rule for target.
-mlu_test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 mlu_test
-.PHONY : mlu_test
+mluComm: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mluComm
+.PHONY : mluComm
 
 # fast build rule for target.
-mlu_test/fast:
-	$(MAKE) -f CMakeFiles/mlu_test.dir/build.make CMakeFiles/mlu_test.dir/build
-.PHONY : mlu_test/fast
+mluComm/fast:
+	$(MAKE) -f CMakeFiles/mluComm.dir/build.make CMakeFiles/mluComm.dir/build
+.PHONY : mluComm/fast
+
+dev_MLU.o: dev_MLU.cc.o
+
+.PHONY : dev_MLU.o
+
+# target to build an object file
+dev_MLU.cc.o:
+	$(MAKE) -f CMakeFiles/mluComm.dir/build.make CMakeFiles/mluComm.dir/dev_MLU.cc.o
+.PHONY : dev_MLU.cc.o
+
+dev_MLU.i: dev_MLU.cc.i
+
+.PHONY : dev_MLU.i
+
+# target to preprocess a source file
+dev_MLU.cc.i:
+	$(MAKE) -f CMakeFiles/mluComm.dir/build.make CMakeFiles/mluComm.dir/dev_MLU.cc.i
+.PHONY : dev_MLU.cc.i
+
+dev_MLU.s: dev_MLU.cc.s
+
+.PHONY : dev_MLU.s
+
+# target to generate assembly for a file
+dev_MLU.cc.s:
+	$(MAKE) -f CMakeFiles/mluComm.dir/build.make CMakeFiles/mluComm.dir/dev_MLU.cc.s
+.PHONY : dev_MLU.cc.s
+
+mluComm.o: mluComm.cc.o
+
+.PHONY : mluComm.o
+
+# target to build an object file
+mluComm.cc.o:
+	$(MAKE) -f CMakeFiles/mluComm.dir/build.make CMakeFiles/mluComm.dir/mluComm.cc.o
+.PHONY : mluComm.cc.o
+
+mluComm.i: mluComm.cc.i
+
+.PHONY : mluComm.i
+
+# target to preprocess a source file
+mluComm.cc.i:
+	$(MAKE) -f CMakeFiles/mluComm.dir/build.make CMakeFiles/mluComm.dir/mluComm.cc.i
+.PHONY : mluComm.cc.i
+
+mluComm.s: mluComm.cc.s
+
+.PHONY : mluComm.s
+
+# target to generate assembly for a file
+mluComm.cc.s:
+	$(MAKE) -f CMakeFiles/mluComm.dir/build.make CMakeFiles/mluComm.dir/mluComm.cc.s
+.PHONY : mluComm.cc.s
 
 mluTool.o: mluTool.cc.o
 
@@ -129,7 +183,7 @@ mluTool.o: mluTool.cc.o
 
 # target to build an object file
 mluTool.cc.o:
-	$(MAKE) -f CMakeFiles/mlu_test.dir/build.make CMakeFiles/mlu_test.dir/mluTool.cc.o
+	$(MAKE) -f CMakeFiles/mluComm.dir/build.make CMakeFiles/mluComm.dir/mluTool.cc.o
 .PHONY : mluTool.cc.o
 
 mluTool.i: mluTool.cc.i
@@ -138,7 +192,7 @@ mluTool.i: mluTool.cc.i
 
 # target to preprocess a source file
 mluTool.cc.i:
-	$(MAKE) -f CMakeFiles/mlu_test.dir/build.make CMakeFiles/mlu_test.dir/mluTool.cc.i
+	$(MAKE) -f CMakeFiles/mluComm.dir/build.make CMakeFiles/mluComm.dir/mluTool.cc.i
 .PHONY : mluTool.cc.i
 
 mluTool.s: mluTool.cc.s
@@ -147,35 +201,8 @@ mluTool.s: mluTool.cc.s
 
 # target to generate assembly for a file
 mluTool.cc.s:
-	$(MAKE) -f CMakeFiles/mlu_test.dir/build.make CMakeFiles/mlu_test.dir/mluTool.cc.s
+	$(MAKE) -f CMakeFiles/mluComm.dir/build.make CMakeFiles/mluComm.dir/mluTool.cc.s
 .PHONY : mluTool.cc.s
-
-mlu_comm.o: mlu_comm.cc.o
-
-.PHONY : mlu_comm.o
-
-# target to build an object file
-mlu_comm.cc.o:
-	$(MAKE) -f CMakeFiles/mlu_test.dir/build.make CMakeFiles/mlu_test.dir/mlu_comm.cc.o
-.PHONY : mlu_comm.cc.o
-
-mlu_comm.i: mlu_comm.cc.i
-
-.PHONY : mlu_comm.i
-
-# target to preprocess a source file
-mlu_comm.cc.i:
-	$(MAKE) -f CMakeFiles/mlu_test.dir/build.make CMakeFiles/mlu_test.dir/mlu_comm.cc.i
-.PHONY : mlu_comm.cc.i
-
-mlu_comm.s: mlu_comm.cc.s
-
-.PHONY : mlu_comm.s
-
-# target to generate assembly for a file
-mlu_comm.cc.s:
-	$(MAKE) -f CMakeFiles/mlu_test.dir/build.make CMakeFiles/mlu_test.dir/mlu_comm.cc.s
-.PHONY : mlu_comm.cc.s
 
 # Help Target
 help:
@@ -184,14 +211,17 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... mlu_test"
+	@echo "... mluComm"
 	@echo "... edit_cache"
+	@echo "... dev_MLU.o"
+	@echo "... dev_MLU.i"
+	@echo "... dev_MLU.s"
+	@echo "... mluComm.o"
+	@echo "... mluComm.i"
+	@echo "... mluComm.s"
 	@echo "... mluTool.o"
 	@echo "... mluTool.i"
 	@echo "... mluTool.s"
-	@echo "... mlu_comm.o"
-	@echo "... mlu_comm.i"
-	@echo "... mlu_comm.s"
 .PHONY : help
 
 

@@ -1,9 +1,9 @@
 /**
- @brife test for mlu comm
- @author huafeng
+* @brief test for mlu comm
+* @author huafeng
 */
 #include "mluTool.h"
-#include <dev_MLU.h>
+#include "dev_MLU.h"
 #include <memory>
 #include <thread>
 #include <iostream>
@@ -12,13 +12,14 @@
 */
 int main(int argc , char *argv[])
 {   
-    if(argc != 2){
-        std::cout<<"Usage error! "<<std::endl \
-        <<"Usage: ./runner num_comms"<<std::endl;
-        return 0;
-    }
-    int comms = atoi(argv[1]);
+    uint32_t local_mlu_num = 0; // mlu数量
+    GetMluNums(&local_mlu_num);
+    int comms; // 通信子数量
+    printf("please input comm numbers (less or equal to mlu number): ");
+    scanf("%d",&comms);
+    getchar();
     
+
     return 0;
 }
 

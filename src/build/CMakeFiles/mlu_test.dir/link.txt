@@ -1,1 +1,0 @@
-clang++   -Wall  -rdynamic CMakeFiles/mlu_test.dir/mlu_comm.cc.o CMakeFiles/mlu_test.dir/mluTool.cc.o  -o mlu_test  -L/usr/local/neuware/lib64 -Wl,-rpath,/usr/local/neuware/lib64 -lstdc++ -lcncl -lcnrt -lcndrv -lcndev -lpthread -lrt 

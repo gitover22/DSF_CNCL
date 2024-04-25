@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-project(mlu_test)
+project(mluComm)
 
 # 设置编译器为 clang
 set(CMAKE_C_COMPILER clang)
@@ -19,7 +19,7 @@ include_directories("/usr/local/neuware/include")
 link_directories("$ENV{NEUWARE_HOME}/lib64") 
 
 # 添加可执行文件生成规则
-add_executable(mlu_test mlu_comm.cc mluTool.cc)
+add_executable(mluComm mluComm.cc mluTool.cc dev_MLU.cc)
 
 # 链接所需的库
-target_link_libraries(mlu_test stdc++ cncl cnrt cndrv cndev pthread rt)
+target_link_libraries(mluComm stdc++ cncl cnrt cndrv cndev pthread rt)
