@@ -1,5 +1,4 @@
 /***********************************************************************************
- * Copyright (c) 2018-2022, CAMBRICON TECHNOLOGIES CORPORATION. All rights reserved.
  * author : huafeng
  ***********************************************************************************/
 
@@ -18,34 +17,14 @@ int main(int argc, char* argv[]) {
     int test_mlu(int);
     test_mlu(atoi(argv[1]));
     return 0;
-    // void testcpp();
-    // testcpp();
 }
-
-void testcpp(){
-    // Create a unique_ptr managing an array of 10 integers
-    std::unique_ptr<int[]> myArray(new int[10]);
-    // Initialize the array with values
-    for (int i = 0; i < 10; ++i) {
-        myArray[i] = i * i;  // Set each element to its index squared
-    }
-    std::cout<<myArray[0]<<std::endl;
-
-    // Access and print the array elements
-    for (int i = 0; i < 10; ++i) {
-        std::cout << "myArray[" << i << "] = " << myArray[i] << std::endl;
-    }
-}
-
-
-
 
 /**
  * @brief 简单的测试demo
  * @param [in] 用户指定的通信子数量
 */
 int test_mlu(int comm_num){
-    
+    std::cout<<sizeof(float)<<std::endl; // 4
     int num_comms = comm_num; // 一个comm对应一个mlu设备
     intPtr dev_list(new int[num_comms]);
     intPtr rank_list(new int[num_comms]); // 通信子的rank号  rank号用来标记comm
@@ -59,8 +38,8 @@ int test_mlu(int comm_num){
     GetMluNums(&num_dev);
     MapRankandDev(num_comms,num_dev,dev_list.get(),rank_list.get());
 
-    int buf_count = (1<<20);
-    int buf_size = buf_count * sizeof(float);
+    int buf_count = (1<<20); // 缓冲区中包含的float类型变量的个数
+    int buf_size = buf_count * sizeof(float); // buf_size为4MB
     // 对每个通信子进行分配空间等
     for(int i=0;i<num_comms;i++){
         CNRT_CHECK_TMP(cnrtSetDevice(dev_list[i]));

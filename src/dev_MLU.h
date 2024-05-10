@@ -24,7 +24,7 @@ public:
     int init_recvBuffer();
 
     /**
-     * @brief 释放缓冲区和队列
+     * @brief 析构函数，释放缓冲区和队列
     */
     ~Dev_MLU();
     

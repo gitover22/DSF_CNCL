@@ -8,20 +8,17 @@ Dev_MLU::Dev_MLU(int id, size_t send_buffer_size,size_t recv_bufffer_size, bool 
             CNRT_CHECK_TMP(cnrtQueueCreate(&queue));
         CNRT_CHECK_TMP(cnrtSetDevice(device_id));
         init_sendBuffer();
-        init_recvBuffer();
-    
+        init_recvBuffer();    
 }
 
 int Dev_MLU::init_sendBuffer(){
-
     CNRT_CHECK_TMP(cnrtMalloc(&send_buffer,send_buffer_size));
     CNRT_CHECK_TMP(cnrtMemset(send_buffer,1,send_buffer_size));
-
 }
+
 int Dev_MLU::init_recvBuffer(){
     CNRT_CHECK_TMP(cnrtMalloc(&recv_buffer,recv_buffer_size));
     CNRT_CHECK_TMP(cnrtMemset(recv_buffer,0,recv_buffer_size));
-
 }
 
 Dev_MLU::~Dev_MLU() {

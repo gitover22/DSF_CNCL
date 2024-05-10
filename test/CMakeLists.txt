@@ -20,7 +20,9 @@ include_directories("/home/zouguoqiang/DSF_CNCL/src")
 link_directories("$ENV{NEUWARE_HOME}/lib64") 
 
 # 添加可执行文件生成规则
-add_executable(testDemo testDemo.cc ../src/mluTool.cc)
+add_executable(testMLU testMLU.cc ../src/mluTool.cc)
+add_executable(testcnrtMalloc testcnrtMalloc.cc ../src/mluTool.cc)
 
 # 链接所需的库
-target_link_libraries(testDemo stdc++ cncl cnrt cndrv cndev pthread rt)
+target_link_libraries(testMLU stdc++ cncl cnrt cndrv cndev pthread rt)
+target_link_libraries(testcnrtMalloc stdc++ cncl cnrt cndrv cndev pthread rt)
