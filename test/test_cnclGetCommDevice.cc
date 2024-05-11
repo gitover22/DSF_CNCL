@@ -7,8 +7,8 @@
 #include <thread> 
 #include <vector>
 #include <iostream>
-#include "mluTool.h" // 需要配置.vscode文件添加自己的头文件搜索目录
+#include "mluTool.h"
 int main(int argc, char* argv[]) {
-   
+    
     return 0;
 }
