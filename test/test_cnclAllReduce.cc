@@ -40,21 +40,14 @@ int main(int argc, char* argv[]) {
         CNRT_CHECK_TMP(cnrtMalloc(&send_buffer[i], buffer_count * sizeof(int)));
         CNRT_CHECK_TMP(cnrtMalloc(&recv_buffer[i], buffer_count * sizeof(int)));
         CNRT_CHECK_TMP(cnrtMemset(recv_buffer[i], 0, buffer_count * sizeof(int)));
-        // 初试化host
+        // init host
         std::fill_n(host, buffer_count, i);
-        // for (int i = 0; i < buffer_count; i++)
-        // {
-        //     std::cout<<host[i]<<" ";
-        // }
-        // std::cout<<std::endl;
         CNRT_CHECK_TMP(cnrtMemcpy(send_buffer[i], (void *)host, buffer_count * sizeof(int), cnrtMemcpyHostToDev));
     }
     // init comms
     CNCL_CHECK(cnclInitComms(comm_list,num_of_comm,dev_list,rank_list,num_of_comm,nullptr));
     
     AllReduce(num_of_comm, buffer_count, send_buffer, recv_buffer, comm_list, nullptr);
-
-    // std::cout<<"debug"<<std::endl;
 
     // read recvbuffer's data
     for(int i=0;i<num_of_comm;i++){
@@ -67,8 +60,6 @@ int main(int argc, char* argv[]) {
             std::cout << *(buff_ptr + j) << " ";
         std::cout<<std::endl<<std::endl;
     }
-
-    
     CNCL_CHECK(cnclDestroyComms(comm_list,num_of_comm));
     for (int i = 0; i < num_of_comm; i++)
     {
@@ -80,10 +71,8 @@ int main(int argc, char* argv[]) {
     delete[] rank_list;
     delete[] comm_list;
     printf("Cncl runs in %d comms on %u devices: success.\n", num_of_comm, num_of_mlu);
-
     return 0;  
 }
-
 void AllReduce(int num_comms, int buf_count, void** send_buffer, void** recv_buffer, cnclComm_t* comms, cnrtQueue_t* queues){
  std::vector<std::thread> threads;
     for(int i=0;i< num_comms;i++){ 
