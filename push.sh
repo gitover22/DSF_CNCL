@@ -12,4 +12,4 @@ git add .
 git commit -m "$1"
 
 # push
-git push 
+git push DSF_CNCL
