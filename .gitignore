@@ -4,4 +4,3 @@ src/.vscode/
 test/build/
 build/
 .vscode/
-.gitignore
