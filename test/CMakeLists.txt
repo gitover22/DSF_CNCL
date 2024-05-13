@@ -20,8 +20,8 @@ include_directories("/home/zouguoqiang/DSF_CNCL/src")
 link_directories("$ENV{NEUWARE_HOME}/lib64") 
 
 # 添加可执行文件生成规则
-add_executable(test_MLU testMLU.cc ../src/mluTool.cc)
-add_executable(test_cnrtMalloc testcnrtMalloc.cc ../src/mluTool.cc)
+add_executable(test_MLU test_MLU.cc ../src/mluTool.cc)
+add_executable(test_cnrtMalloc test_cnrtMalloc.cc ../src/mluTool.cc)
 add_executable(test_cnclAllReduce test_cnclAllReduce.cc ../src/mluTool.cc)
 add_executable(test_cnclSend_cnclRecv test_cnclSend_cnclRecv.cc ../src/mluTool.cc)
 
