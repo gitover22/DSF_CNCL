@@ -11,20 +11,26 @@ DSF_CNCL
 目录结构
 
 ```
+|-- docs
+    |-- README.md
 |-- src
     |-- build.sh
     |-- CMakeLists.txt
-    |-- Makefile
     |-- dev_MLU.cc
     |-- dev_MLU.h
     |-- mluComm.cc
     |-- mluTool.cc
     |-- mluTool.h
 |-- test
-    |-- CMakeLists.txt
     |-- build.sh
-    |-- testDemo.cc
-|-- README.md
+    |-- CMakeLists.txt
+    |-- test_cnclAllReduce.cc
+    |-- test_cnclSend_cnclRecv.cc
+    |-- test_cnrtMalloc.cc
+    |-- test_MLU.cc
+|-- .gitignore
+|-- LICENSE
+|-- push.sh
 ```
 
 文件介绍
