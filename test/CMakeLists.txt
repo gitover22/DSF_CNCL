@@ -23,8 +23,10 @@ link_directories("$ENV{NEUWARE_HOME}/lib64")
 add_executable(testMLU testMLU.cc ../src/mluTool.cc)
 add_executable(testcnrtMalloc testcnrtMalloc.cc ../src/mluTool.cc)
 add_executable(test_cnclAllReduce test_cnclAllReduce.cc ../src/mluTool.cc)
+add_executable(test_cnclSend_cnclRecv test_cnclSend_cnclRecv.cc ../src/mluTool.cc)
 
 # 链接所需的库
 target_link_libraries(testMLU stdc++ cncl cnrt cndrv cndev pthread rt)
 target_link_libraries(testcnrtMalloc stdc++ cncl cnrt cndrv cndev pthread rt)
 target_link_libraries(test_cnclAllReduce stdc++ cncl cnrt cndrv cndev pthread rt)
+target_link_libraries(test_cnclSend_cnclRecv stdc++ cncl cnrt cndrv cndev pthread rt)
