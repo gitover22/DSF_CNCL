@@ -1,7 +1,5 @@
 /**
- * 本实验环境：8个 mlu370 X8，mlulink和PICE互联
- * 每个mlu建立两个缓冲区，接受和发送
- * 能实现用户自定义mlu之间交换数据
+ * 实现mlu之间交换数据
  * @author huafeng
 */
 
