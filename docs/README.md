@@ -16,9 +16,11 @@ DSF_CNCL
 |-- src
     |-- build.sh
     |-- CMakeLists.txt
+    |-- cnclComm.cc
+    |-- cnclComm.h
     |-- dev_MLU.cc
     |-- dev_MLU.h
-    |-- mluComm.cc
+    |-- DSF.cc
     |-- mluTool.cc
     |-- mluTool.h
 |-- test
@@ -32,17 +34,6 @@ DSF_CNCL
 |-- LICENSE
 |-- push.sh
 ```
-
-文件介绍
-
-src
-
-- CMakeLists.txt：cmake描述文件，用于编译样例。
-- build.sh: 检查依赖库文件是否完整，并创建build，使用cmake编译所有样例。
-- Makefile: 简易构建项目，用于简单自测
-- mluComm.cc: 主函数，待做
-- mluTool.cc: 工具实现
-- mluTool.h: 工具定义
 
 依赖库目录结构(cambricon官网可下载)
 
