@@ -14,8 +14,7 @@ public:
     /**
      * @brief 创建cnclComm
     */
-    static std::shared_ptr<CNCLComm> create(int numRanks, int rank, int device,
-                                const cnclCliqueId_t clique_id);
+    void init_comm(int total_Ranks, int device,int rank, const cnclCliqueId_t clique_id);
 
     // Must not be copyable
     CNCLComm(const CNCLComm&) = delete;
@@ -26,6 +25,10 @@ public:
 
     // allow Move constructable
     CNCLComm(CNCLComm&& other);
+
+    void init_rank(int rank);
+
+    int get_rank();
 
     cnclComm_t getCnclComm();
 

@@ -25,15 +25,6 @@ using cnrtQueuePtr = std::unique_ptr<cnrtQueue_t[]>;
     }                                                              \
   } while (0)
 
-#define CNCL_CHECK(cmd)                                              \
-  do {                                                                    \
-    cnclResult_t error = cmd;                                             \
-    if (error != CNCL_RET_SUCCESS) {                                      \
-      std::string err = "CNCL error in: " + std::string(__FILE__) + ":" + \
-                        std::to_string(__LINE__) + ", " +                 \
-                        std::string(cnclGetErrorStr(error));              \
-    }                                                                     \
-  } while (0)
 
 #define CNCL_ASSERT(cmd)                                           \
   do {                                                                  \
@@ -68,4 +59,18 @@ void MapRankandDev(int num_comms,uint32_t num_dev,int *dev_list,int *rank_list);
 */
 void PrintList(int * list,int num);
 
+/**
+ * @brief 获取该通信域内通信子数量
+ * @param comm [in] 要查询的通信子
+*/
+int get_clique_totalComm(const cnclComm_t comm);
+
+
+
+/**
+ * @brief 打印缓冲区信息
+ * @param send_buffer [in] 发送缓冲区
+ * @param recv_buffer [in] 接收缓冲区
+*/
+void print_buffer_info(int dev_index,int buffer_count,void* send_buffer,void* recv_buffer);
 #endif
