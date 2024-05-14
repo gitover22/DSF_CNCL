@@ -25,6 +25,27 @@ using cnrtQueuePtr = std::unique_ptr<cnrtQueue_t[]>;
     }                                                              \
   } while (0)
 
+#define CNCL_CHECK(cmd)                                              \
+  do {                                                                    \
+    cnclResult_t error = cmd;                                             \
+    if (error != CNCL_RET_SUCCESS) {                                      \
+      std::string err = "CNCL error in: " + std::string(__FILE__) + ":" + \
+                        std::to_string(__LINE__) + ", " +                 \
+                        std::string(cnclGetErrorStr(error));              \
+    }                                                                     \
+  } while (0)
+
+#define CNCL_ASSERT(cmd)                                           \
+  do {                                                                  \
+    cnclResult_t res = cmd;                                             \
+    if (res != CNCL_RET_SUCCESS) {                                      \
+      std::string err = cnclGetErrorStr(res);                           \
+      fprintf(stderr, "CNCL error in: %s:%d, %s\n", __FILE__, __LINE__, \
+              err.c_str());                                             \
+      abort();                                                          \
+    }                                                                   \
+  } while (0)
+
 /**
  * @brief 获取设备数量
  * @param nums [out] 接受指向设备数量的地址

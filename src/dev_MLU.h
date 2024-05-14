@@ -12,6 +12,10 @@ public:
      * @param need_queue [in] 是否需要申请队列
     */
     Dev_MLU(int id, size_t send_buffer_size,size_t recv_bufffer_size,bool need_queue);
+    /**
+     * @brief 默认构造函数
+    */
+    Dev_MLU();
 
     /**
      * @brief 初试化发送缓冲区
