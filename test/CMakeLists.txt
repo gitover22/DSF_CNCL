@@ -24,9 +24,11 @@ add_executable(test_MLU test_MLU.cc ../src/mluTool.cc)
 add_executable(test_cnrtMalloc test_cnrtMalloc.cc ../src/mluTool.cc)
 add_executable(test_cnclAllReduce test_cnclAllReduce.cc ../src/mluTool.cc)
 add_executable(test_cnclSend_cnclRecv test_cnclSend_cnclRecv.cc ../src/mluTool.cc)
+add_executable(clique_threads clique_threads.cc ../src/mluTool.cc)
 
 # 链接所需的库
 target_link_libraries(test_MLU stdc++ cncl cnrt cndrv cndev pthread rt)
 target_link_libraries(test_cnrtMalloc stdc++ cncl cnrt cndrv cndev pthread rt)
 target_link_libraries(test_cnclAllReduce stdc++ cncl cnrt cndrv cndev pthread rt)
 target_link_libraries(test_cnclSend_cnclRecv stdc++ cncl cnrt cndrv cndev pthread rt)
+target_link_libraries(clique_threads stdc++ cncl cnrt cndrv cndev pthread rt)
