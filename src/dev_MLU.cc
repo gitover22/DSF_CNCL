@@ -11,16 +11,16 @@ Dev_MLU::Dev_MLU(int id, int send_buffer_size,int recv_buffer_size, bool need_qu
 }
 
 void Dev_MLU::init_sendBuffer(int s_GB){
-    // this->send_buffer_size = s_GB * (2<<30);
-    this->send_buffer_size = 4*sizeof(int); // test
+    this->send_buffer_size = s_GB * (2<<30);
+    // this->send_buffer_size = 4*sizeof(int); // test
     CNRT_CHECK_TMP(cnrtSetDevice(device_id));
     CNRT_CHECK_TMP(cnrtMalloc(&send_buffer,send_buffer_size));
     CNRT_CHECK_TMP(cnrtMemset(send_buffer,0,send_buffer_size));
 }
 
 void Dev_MLU::init_recvBuffer(int r_GB){
-    // this->recv_buffer_size = r_GB * (2<<30);
-    this->recv_buffer_size = 4*sizeof(int); // test
+    this->recv_buffer_size = r_GB * (2<<30);
+    // this->recv_buffer_size = 4*sizeof(int); // test
     CNRT_CHECK_TMP(cnrtSetDevice(device_id));
     CNRT_CHECK_TMP(cnrtMalloc(&recv_buffer,recv_buffer_size));
     CNRT_CHECK_TMP(cnrtMemset(recv_buffer,0,recv_buffer_size));

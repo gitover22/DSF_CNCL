@@ -1,5 +1,6 @@
 #include "mluTool.h"
 #include "dev_MLU.h"
+#include "initComm.h"
 #include <mutex>
 // RAII wrapper for CNCL communicator in a process
 class CNCLComm {
@@ -35,7 +36,7 @@ public:
     void cnclCommAbort();
 
     bool isAborted() const;
-
+    friend bool Map_Comm(cnclComm_t *tComm_list,CNCLComm* comm_list,int comms);
 protected:
     cnclComm_t cnclComm_;  // 通信子对应的结构体
     bool aborted_;        // 通信子是否被中止
