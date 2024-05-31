@@ -4,3 +4,4 @@ src/.vscode/
 test/build/
 build/
 .vscode/
+torch_mlu/

@@ -117,8 +117,6 @@ void thread2_func(){
     int count;
     CNCL_CHECK(cnclGetCommCount(&count, comms[0]));
     std::cout<<"count: "<<count<<std::endl;
-
-
     for (int i = 0; i < num_comms; i++)
     {
         CNRT_CHECK_TMP(cnrtQueueSync(queues[i]));
