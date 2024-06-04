@@ -19,7 +19,7 @@ include_directories("/usr/local/neuware/include")
 link_directories("$ENV{NEUWARE_HOME}/lib64") 
 
 # 添加可执行文件生成规则
-add_executable(DSF cnclComm.cc DSF.cc mluTool.cc dev_MLU.cc)
+add_executable(DSF cnclComm.cc DSF.cc mluTool.cc dev_MLU.cc initComm.cc)
 
 # 链接所需的库
 target_link_libraries(DSF stdc++ cncl cnrt cndrv cndev pthread rt)

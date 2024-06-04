@@ -1,14 +1,19 @@
+#ifndef CNCL_COMM_H
+#define CNCL_COMM_H
 #include "mluTool.h"
 #include "dev_MLU.h"
-#include "initComm.h"
 #include <mutex>
+
+
+class CNCLComm;
+bool Map_Comm(cnclComm_t *tComm_list, std::vector<CNCLComm> &comm_list, int comms);
 // RAII wrapper for CNCL communicator in a process
 class CNCLComm {
 public:
     // explicit防止隐式类型转化 
     explicit CNCLComm(cnclComm_t cnclComm)
         : cnclComm_(cnclComm), aborted_(false) {}
-
+    CNCLComm(int rank_id) : rank_(rank_id) {}
     CNCLComm() : CNCLComm(nullptr) {}
 
     ~CNCLComm() noexcept;
@@ -36,7 +41,7 @@ public:
     void cnclCommAbort();
 
     bool isAborted() const;
-    friend bool Map_Comm(cnclComm_t *tComm_list,CNCLComm* comm_list,int comms);
+    friend bool Map_Comm(cnclComm_t *tComm_list, std::vector<CNCLComm> &comm_list, int comms);
 protected:
     cnclComm_t cnclComm_;  // 通信子对应的结构体
     bool aborted_;        // 通信子是否被中止
@@ -44,3 +49,6 @@ protected:
     int rank_;  // 通信子的rank号
     Dev_MLU dev_mlu; // 通信子对应的设备
 };
+
+
+#endif

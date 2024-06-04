@@ -38,6 +38,9 @@ public:
     */
     void init_recvBuffer(int r_GB);
 
+    Dev_MLU(Dev_MLU&& other) noexcept;
+
+    Dev_MLU& operator=(Dev_MLU&& other) noexcept;
     /**
      * @brief 析构函数，释放缓冲区和队列
     */
@@ -45,6 +48,9 @@ public:
     
     void *get_send_buffer();
     void *get_recv_buffer();
+    cnrtQueue_t get_queue(){
+        return queue;
+    }
 private:
     int device_id; // 当前设备id
     cnrtQueue_t queue; // 该mlu上的队列

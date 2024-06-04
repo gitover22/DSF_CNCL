@@ -7,7 +7,7 @@
 #include<cnrt.h>
 #include<cncl.h>
 #include<memory>
-
+class CNCLComm;
 // 智能指针
 using intPtr =std::unique_ptr<int[]>;
 using cnclCommPtr = std::unique_ptr<cnclComm_t[]>;
@@ -72,5 +72,6 @@ int get_clique_totalComm(const cnclComm_t comm);
  * @param send_buffer [in] 发送缓冲区
  * @param recv_buffer [in] 接收缓冲区
 */
-void print_buffer_info(int dev_index,int buffer_count,void* send_buffer,void* recv_buffer);
+bool print_buffer_info(int dev_index,int buffer_count,void* send_buffer,void* recv_buffer);
+
 #endif

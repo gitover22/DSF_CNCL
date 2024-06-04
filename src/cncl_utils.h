@@ -1,6 +1,6 @@
 
-#pragma once
-
+#ifndef CNCL_UTILS_H
+#define CNCL_UTILS_H
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -105,3 +105,4 @@ class CNCLComm {
 };
 
 }  // namespace torch_mlu
+#endif

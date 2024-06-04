@@ -7,7 +7,7 @@ CNCLComm::~CNCLComm() noexcept {
     if (cnclComm_ && !aborted_) {
         // TODO(zhiguangda): use cnclCommAbort when catch support
         // environment variable like ENABLE_NCCL_ERROR_CHECKING
-        CNCL_ASSERT(cnclDestroyComms(&cnclComm_, 1));
+        // CNCL_ASSERT(cnclDestroyComms(&cnclComm_, 1));
     }
     
 }
