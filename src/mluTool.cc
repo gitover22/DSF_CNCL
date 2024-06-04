@@ -30,7 +30,7 @@ int get_clique_totalComm(const cnclComm_t comm){
  * @param send_buffer [in] 发送缓冲区
  * @param recv_buffer [in] 接收缓冲区
 */
-bool print_buffer_info(int dev_index,int buffer_count,void* send_buffer,void* recv_buffer){
+bool Print_buffer_info(int dev_index,int buffer_count,void* send_buffer,void* recv_buffer){
     std::cout<<"mlu["<<dev_index<<"] buffer data:"<<std::endl;
     int* buff_ptr = new int[buffer_count];
     CNRT_CHECK_TMP(cnrtMemcpy((void *)buff_ptr, send_buffer, buffer_count * sizeof(int), cnrtMemcpyDevToHost));
@@ -44,6 +44,7 @@ bool print_buffer_info(int dev_index,int buffer_count,void* send_buffer,void* re
     for(int j=0;j<buffer_count;j++){
         std::cout << buff_ptr[j] <<" " << std::flush;
     }
+    std::cout<<std::endl;
     return true;
 
 }

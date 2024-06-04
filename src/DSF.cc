@@ -18,14 +18,12 @@ int main(int argc, char *argv[])
     GetMluNums(&local_mlu_num);
     printf("local mlu nums: %d\n", local_mlu_num);
     int comms; // 通信子数量
-    printf("please input comm numbers (less or equal to mlu number): ");
+    printf("please input comm numbers: ");
     scanf("%d", &comms);
     getchar();
-    // Dev_MLU dev_list[comms];
     std::vector<Dev_MLU> VDev;
     VDev.reserve(comms); // 预先分配足够空间
 
-    // CNCLComm comm_list[comms];
     std::vector<CNCLComm> VComm;
     VComm.reserve(comms);
     cnclComm_t *tComm_list = new cnclComm_t[comms]; // communicator list
@@ -35,7 +33,6 @@ int main(int argc, char *argv[])
 
     for (int i = 0; i < comms; i++)
     {
-        // comm_list[i].init_rank(i);
         VComm.emplace_back(i);
         VDev.emplace_back(VComm[i].get_rank() % local_mlu_num, 1, 1, true);
     }
@@ -50,13 +47,12 @@ int main(int argc, char *argv[])
         perror("Vertify_CnclComm");
         exit(EXIT_FAILURE);
     }
-    if (!print_buffer_info(7, 256, VDev[7].get_send_buffer(), VDev[7].get_recv_buffer()))
+    if (!Print_buffer_info(7, 256, VDev[7].get_send_buffer(), VDev[7].get_recv_buffer()))
     {
         perror("print_buffer_info error");
         exit(EXIT_FAILURE);
     }
 
     CNCL_CHECK(cnclDestroyComms(tComm_list, comms));
-    std::this_thread::sleep_for(std::chrono::seconds(60));
     return 0;
 }

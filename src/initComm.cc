@@ -23,12 +23,6 @@ bool Map_Comm(cnclComm_t *tComm_list, std::vector<CNCLComm> &comm_list, int comm
 
 bool Vertify_CnclComm(std::vector<CNCLComm> &comm_list, int comms, std::vector<Dev_MLU> &dev_list)
 {
-     int* buff_ptr = new int[256];
-    CNRT_CHECK_TMP(cnrtMemcpy((void *)buff_ptr, dev_list[2].get_send_buffer(), 256 * sizeof(int), cnrtMemcpyDevToHost));
-    std::cout<<"send_buffer: ";
-    for(int j=0;j<256;j++)
-        std::cout << buff_ptr[j] << " ";
-    std::cout<<std::endl;
     CNCL_CHECK(cnclSend(dev_list[2].get_send_buffer(), 256, cnclInt32, comm_list[7].get_rank(),
                         comm_list[2].getCnclComm(), dev_list[2].get_queue()));
     CNCL_CHECK(cnclRecv(dev_list[7].get_recv_buffer(), 256, cnclInt32, comm_list[2].get_rank(),

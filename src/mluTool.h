@@ -72,6 +72,6 @@ int get_clique_totalComm(const cnclComm_t comm);
  * @param send_buffer [in] 发送缓冲区
  * @param recv_buffer [in] 接收缓冲区
 */
-bool print_buffer_info(int dev_index,int buffer_count,void* send_buffer,void* recv_buffer);
+bool Print_buffer_info(int dev_index,int buffer_count,void* send_buffer,void* recv_buffer);
 
 #endif
