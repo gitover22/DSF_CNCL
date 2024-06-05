@@ -9,9 +9,6 @@
 #include "dev_MLU.h"
 #include "cnclComm.h"
 #include "initComm.h"
-/**
- * 一个通信子对应一个设备，通信子用rank号来进行标记
- */
 int main(int argc, char *argv[])
 {
     uint32_t local_mlu_num = 0; // mlu数量
@@ -19,11 +16,10 @@ int main(int argc, char *argv[])
     printf("local mlu nums: %d\n", local_mlu_num);
     int comms; // 通信子数量
     printf("please input comm numbers: ");
-    scanf("%d", &comms);
+    std::cin>>comms;
     getchar();
     std::vector<Dev_MLU> VDev;
     VDev.reserve(comms); // 预先分配足够空间
-
     std::vector<CNCLComm> VComm;
     VComm.reserve(comms);
     cnclComm_t *tComm_list = new cnclComm_t[comms]; // communicator list
@@ -34,7 +30,11 @@ int main(int argc, char *argv[])
     for (int i = 0; i < comms; i++)
     {
         VComm.emplace_back(i);
-        VDev.emplace_back(VComm[i].get_rank() % local_mlu_num, 1, 1, true);
+        int a,b;
+        // std::cout<<"input dev["<<i+1<<"] bufferSize (send recv) KB:";
+        // std::cin>>a>>b;
+        a=b=1; // 1KB
+        VDev.emplace_back(VComm[i].get_rank() % local_mlu_num, a, b, true);
     }
     cnclCliqueId clique_id;
     CNCL_CHECK(cnclGetCliqueId(&clique_id)); // 如何通过通信域id获取通信域内的通信子数量？
@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
         perror("Vertify_CnclComm");
         exit(EXIT_FAILURE);
     }
-    if (!Print_buffer_info(7, 256, VDev[7].get_send_buffer(), VDev[7].get_recv_buffer()))
+    if (!Print_buffer_info(7, (VDev[7].send_buffer_size / 4), VDev[7].get_send_buffer(), VDev[7].get_recv_buffer()))
     {
         perror("print_buffer_info error");
         exit(EXIT_FAILURE);

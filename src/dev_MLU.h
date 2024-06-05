@@ -2,6 +2,7 @@
 #define DEV_MLU_H
 
 #include "mluTool.h"
+
 class Dev_MLU {
 public:
     /**
@@ -51,13 +52,13 @@ public:
     cnrtQueue_t get_queue(){
         return queue;
     }
+    size_t send_buffer_size; // 该mlu上发送缓冲区大小
+    size_t recv_buffer_size; // 该mlu上接受缓冲区大小
 private:
     int device_id; // 当前设备id
     cnrtQueue_t queue; // 该mlu上的队列
     void* send_buffer; // 该mlu指向发送缓冲区的指针
     void* recv_buffer; // 该mlu指向接受缓冲区的指针
-    size_t send_buffer_size; // 该mlu上发送缓冲区大小
-    size_t recv_buffer_size; // 该mlu上接受缓冲区大小
 };
 
 

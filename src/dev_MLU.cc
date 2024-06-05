@@ -12,31 +12,22 @@ Dev_MLU::Dev_MLU(int id, int send_buffer_size, int recv_buffer_size, bool need_q
 
 void Dev_MLU::init_sendBuffer(int s_KB)
 {
-    this->send_buffer_size = s_KB * (2 << 10);
-    // this->send_buffer_size = 4*sizeof(int); // test
-    // CNRT_CHECK_TMP(cnrtSetDevice(device_id));
-    // CNRT_CHECK_TMP(cnrtMalloc(&send_buffer, send_buffer_size));
-    // CNRT_CHECK_TMP(cnrtMemset(send_buffer, 0, send_buffer_size));
-    int *host_buffer = new int[1024 / 4];
-    std::fill_n(host_buffer, 1024 / 4, this->device_id);
-    // printf("device:%d \n", this->device_id);
+    this->send_buffer_size = s_KB * KB_SIZE_BYTE;
+    int *host_buffer = new int[s_KB*KB_SIZE_BYTE / INT_COUNT];
+    std::fill_n(host_buffer, s_KB*KB_SIZE_BYTE / INT_COUNT, this->device_id);
     CNRT_CHECK_TMP(cnrtSetDevice(device_id));
     CNRT_CHECK_TMP(cnrtMalloc(&send_buffer, send_buffer_size));
-    cnrtMemcpy(send_buffer, (void *)host_buffer, 256 * sizeof(int), cnrtMemcpyHostToDev);
+    cnrtMemcpy(send_buffer, (void *)host_buffer, (s_KB*KB_SIZE_BYTE / INT_COUNT) * sizeof(int), cnrtMemcpyHostToDev);
 }
 
 void Dev_MLU::init_recvBuffer(int r_KB)
 {
-    this->recv_buffer_size = r_KB * (2 << 10);
-    // this->recv_buffer_size = 4*sizeof(int); // test
-    int *host_buffer = new int[1024 / 4];
-    std::fill_n(host_buffer, 1024 / 4, this->device_id);
-    // printf("device:%d \n", this->device_id);
+    this->recv_buffer_size = r_KB * KB_SIZE_BYTE;
+    int *host_buffer = new int[r_KB*KB_SIZE_BYTE / INT_COUNT];
+    std::fill_n(host_buffer, r_KB*KB_SIZE_BYTE / INT_COUNT, this->device_id);
     CNRT_CHECK_TMP(cnrtSetDevice(device_id));
     CNRT_CHECK_TMP(cnrtMalloc(&recv_buffer, recv_buffer_size));
-    cnrtMemcpy(recv_buffer, (void *)host_buffer, 256 * sizeof(int), cnrtMemcpyHostToDev);
-
-    // CNRT_CHECK_TMP(cnrtMemset(recv_buffer,0,recv_buffer_size));
+    cnrtMemcpy(recv_buffer, (void *)host_buffer, (r_KB*KB_SIZE_BYTE / INT_COUNT) * sizeof(int), cnrtMemcpyHostToDev);
 }
 
 Dev_MLU::Dev_MLU(Dev_MLU &&other) noexcept

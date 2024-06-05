@@ -8,10 +8,16 @@
 #include<cncl.h>
 #include<memory>
 class CNCLComm;
-// 智能指针
 using intPtr =std::unique_ptr<int[]>;
 using cnclCommPtr = std::unique_ptr<cnclComm_t[]>;
 using cnrtQueuePtr = std::unique_ptr<cnrtQueue_t[]>;
+
+#define KB_SIZE_BYTE 1024
+#define MB_SIZE_BYTE (1024*1024)
+#define CHAR_COUNT 1
+#define INT_COUNT 4
+#define FLOAT_COUNT 4
+#define DOUBLE_COUNT 8
 
 /**
  * @brief 检查CNRT系列函数执行结果
